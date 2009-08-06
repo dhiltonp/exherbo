@@ -24,7 +24,7 @@ DEPENDENCIES="
         media-libs/liblrdf
         sys-libs/zlib
 	dev-libs/libtar
-        flac? ( media-libs/flac )
+        media-libs/flac
 "
 # version deps exist, they just don't have exheres
 #zlib+libtar or libarchive
