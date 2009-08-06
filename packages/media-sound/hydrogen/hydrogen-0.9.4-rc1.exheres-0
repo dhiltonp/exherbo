@@ -5,6 +5,8 @@ require scons
 
 SUMMARY="Advanced Drum Machine"
 HOMEPAGE="http://www.hydrogen-music.org/"
+LICENCES="GPL-2"
+
 SLOT="0"
 PLATFORMS="~amd64"
 MY_PNV="${PNV}-1"

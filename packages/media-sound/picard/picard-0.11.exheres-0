@@ -9,6 +9,9 @@
 
 
 SUMMARY="Advanced audio tagging application with audio fingerprinting support"
+HOMEPAGE="http://musicbrainz.org/doc/Picard_Tagger"
+LICENCES="GPL-2"
+
 SLOT="0"
 PLATFORMS="~amd64 ~x86"
 
