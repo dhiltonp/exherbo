@@ -1,0 +1,21 @@
+# Copyright 2008 David Hilton
+# Distributed under the terms of the GNU General Public License v2
+
+SUMMARY="MAX/MSP-style real-time graphical programming environment for audio, video, and graphical processing"
+HOMEPAGE="http://puredata.info/"
+LICENCES="BSD"
+
+SLOT="0"
+PLATFORMS="~amd64"
+MY_PV="${PV%.5}-5"
+
+
+MYOPTIONS="alsa"
+
+DEPENDENCIES="
+    build+run:
+        dev-lang/tk
+"
+
+DOWNLOADS="http://downloads.sourceforge.net/${PN}/pd-${MY_PV}.src.tar.gz"
+WORK="${WORKBASE}/pd-${MY_PV}"
