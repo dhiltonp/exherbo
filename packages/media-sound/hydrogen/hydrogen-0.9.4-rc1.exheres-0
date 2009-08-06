@@ -1,0 +1,42 @@
+# Copyright 2008 David Hilton
+# Distributed under the terms of the GNU General Public License v2
+
+require scons
+
+SUMMARY="Advanced Drum Machine"
+HOMEPAGE="http://www.hydrogen-music.org/"
+SLOT="0"
+PLATFORMS="~amd64"
+MY_PNV="${PNV}-1"
+
+
+MYOPTIONS=""  #"liblash (dne) libportaudio/libportmidi (dne) jack, alsa, flac, liblrdf (not sure on how to disable)"
+
+
+DEPENDENCIES="
+    build+run:
+        x11-libs/qt[>=4.4]
+        sys-sound/alsa-lib
+        media-libs/libsndfile[>=1.0.17]
+        media-sound/jack-audio-connection-kit[>=0.103.0]
+        media-libs/liblrdf
+        sys-libs/zlib
+	dev-libs/libtar
+        flac? ( media-libs/flac )
+"
+# version deps exist, they just don't have exheres
+#zlib+libtar or libarchive
+#
+#?liblash media-libs/liblash
+
+src_compile() {
+    QTDIR=/usr/lib/qt4 scons_src_compile
+}
+
+src_install() {
+    QTDIR=/usr/lib/qt4 scons_src_install
+}
+
+
+DOWNLOADS="http://prdownloads.sf.net/${PN}/${MY_PNV}.tar.gz"
+WORK="${WORKBASE}/${MY_PNV}"
