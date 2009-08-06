@@ -14,5 +14,6 @@ DEPENDENCIES="
     build+run:
         zlib? ( sys-libs/zlib )
 "
+DEFAULT_SRC_CONFIGURE_OPTION_WITHS=( zlib )
 
 DOWNLOADS="ftp://ftp.feep.net/pub/software/${PN}/${PNV}.tar.gz"
