@@ -1,0 +1,18 @@
+# Copyright 2008 David Hilton
+# Distributed under the terms of the GNU General Public License v2
+
+SUMMARY="A C library for manipulating POSIX tar files"
+HOMEPAGE="http://www.feep.net/libtar/"
+LICENCES="as-is"
+SLOT="0"
+PLATFORMS="~amd64"
+
+MYOPTIONS="zlib"
+
+
+DEPENDENCIES="
+    build+run:
+        zlib? ( sys-libs/zlib )
+"
+
+DOWNLOADS="ftp://ftp.feep.net/pub/software/${PN}/${PNV}.tar.gz"
