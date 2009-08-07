@@ -7,7 +7,7 @@ LICENCES="BSD"
 
 SLOT="0"
 PLATFORMS="~amd64"
-MY_PV="${PV%.5}-5"
+MY_PNV="${PNV%.5}-5"
 
 
 MYOPTIONS="alsa"
@@ -19,5 +19,5 @@ DEPENDENCIES="
 
 DEFAULT_SRC_CONFIGURE_OPTION_ENABLES=( alsa )
 
-DOWNLOADS="http://downloads.sourceforge.net/${PN}/pd-${MY_PV}.src.tar.gz"
-WORK="${WORKBASE}/pd-${MY_PV}/src"
+DOWNLOADS="mirror://sourceforge/${PN}/${MY_PNV}.src.tar.gz"
+WORK="${WORKBASE}/${MY_PNV}/src"
