@@ -6,8 +6,8 @@ HOMEPAGE="http://puredata.info/"
 LICENCES="BSD"
 
 SLOT="0"
-PLATFORMS="~amd64"
-MY_PNV="${PNV%.5}-5"
+PLATFORMS="~amd64 ~x86"
+MY_PNV="pd-${PV%.5}-5"
 
 
 MYOPTIONS="alsa"
