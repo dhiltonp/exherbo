@@ -5,7 +5,7 @@ SUMMARY="A C library for manipulating POSIX tar files"
 HOMEPAGE="http://www.feep.net/libtar/"
 LICENCES="as-is"
 SLOT="0"
-PLATFORMS="~amd64"
+PLATFORMS="~amd64 ~x86"
 
 MYOPTIONS="zlib"
 
