@@ -1,0 +1,20 @@
+# Copyright 2009 David Hilton
+# Distributed under the terms of the GNU General Public License v2
+
+SUMMARY="A small XML library that reads and writes XML and XML-like data files"
+HOMEPAGE="http://minixml.org/"
+LICENCES="Mini-XML GPL-2"
+SLOT="0"
+PLATFORMS="~amd64 ~x86"
+
+MYOPTIONS=""
+
+DEPENDENCIES=""
+
+src_install () {
+    make DSTROOT="${IMAGE}" install
+}
+
+for mirror in 'http://ftp.easysw.com/' 'http://ftp2.easysw.com/' 'http://ftp.funet.fi/mirrors/ftp.easysw.com/' 'http://ftp.rz.tu-bs.de/pub/mirror/ftp.easysw.com/ftp/'
+do DOWNLOADS+=" ${mirror}pub/${PN}/${PV}/${PNV}.tar.gz"
+done
