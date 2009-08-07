@@ -22,7 +22,6 @@ DEPENDENCIES="
         media-libs/libsndfile[>=1.0.17]
         media-sound/jack-audio-connection-kit[>=0.103.0]
         media-libs/liblrdf
-        sys-libs/zlib
 	dev-libs/libtar
         media-libs/flac
 "
