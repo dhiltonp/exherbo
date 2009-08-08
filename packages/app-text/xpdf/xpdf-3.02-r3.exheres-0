@@ -1,0 +1,28 @@
+# Copyright 2009 David Hilton
+# Distributed under the terms of the GNU General Public License v2
+
+SUMMARY="A small and lightweight pdf viewer"
+HOMEPAGE="http://www.foolabs.com/xpdf/"
+LICENCES="GPL-2"
+
+SLOT="0"
+PLATFORMS="~amd64"
+MY_PNV="${PNV%-r3}"
+
+MYOPTIONS="a4-paper opi"
+
+
+DEPENDENCIES="
+    x11-libs/openmotif
+    media-libs/freetype[>=2.0.5]
+"
+
+DEFAULT_SRC_CONFIGURE_PARAMS=( --with-freetype2-library=/usr/include/freetype2 --with-freetype2-includes=/usr/include/freetype2 )
+DEFAULT_SRC_CONFIGURE_OPTION_WITHS=( opi a4-paper )
+DEFAULT_SRC_PREPARE_PATCHES=( "${FILES}/xpdf-3.02pl1.patch" "${FILES}/xpdf-3.02pl2.patch" "${FILES}/xpdf-3.02pl3.patch" )
+
+
+for mirror in 'ftp://ftp.ibiblio.org/pub/Linux/apps/graphics/viewers/X' 'ftp://ftp.foolabs.com/pub' 'http://gd.tuwien.ac.at/publishing'
+do DOWNLOADS+=" ${mirror}/${PN}/${MY_PNV}.tar.gz"
+done
+WORK="${WORKBASE}/${MY_PNV}"
