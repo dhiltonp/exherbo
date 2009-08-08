@@ -1,0 +1,35 @@
+# Copyright 2008 David Hilton
+# Distributed under the terms of the GNU General Public License v2
+
+
+# this ebuild completely ignores ExternalPrograms/{Controller,Spliter}
+
+# also, actual audio output has not been tested - but I have confirmed compilation, execution
+
+SUMMARY="Realtime Software Synth"
+HOMEPAGE="http://zynaddsubfx.sourceforge.net/"
+LICENCES="GPL-2"
+
+SLOT="0"
+PLATFORMS="~amd64"
+
+
+MYOPTIONS="" 
+
+DEPENDENCIES="
+    build+run:
+        sci-libs/fftw[>=2]
+	dev-libs/mxml[>=2.5]
+	x11-libs/fltk
+"
+
+src_install() {
+    mkdir -p ${IMAGE}/usr/local/bin
+    cp ${WORK}/zynaddsubfx ${IMAGE}/usr/local/bin
+}
+
+
+DEFAULT_SRC_COMPILE_PARAMS=( -j1 )
+
+DOWNLOADS="mirror://sourceforge/zynaddsubfx/${PNV}.tar.bz2"
+WORK="${WORKBASE}/${PNV}/src"
